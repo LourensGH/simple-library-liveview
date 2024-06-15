@@ -17,7 +17,7 @@ defmodule BooksAppWeb.Router do
   scope "/", BooksAppWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    get "/", PageController, :home
     live "/books", BookLive.Index, :index
     live "/books/new", BookLive.Index, :new
     live "/books/:id/edit", BookLive.Index, :edit
